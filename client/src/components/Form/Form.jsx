@@ -23,7 +23,7 @@ const FormSection = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4000/ask', {
+      const response = await axios.post('https://gym-project-jzk9.onrender.com/ask', {
         name,
         question,
       });

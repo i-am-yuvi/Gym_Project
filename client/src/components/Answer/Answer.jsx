@@ -15,7 +15,7 @@ function Answer() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/questions');
+        const response = await axios.get('https://gym-project-jzk9.onrender.com/questions');
         setAnswers(response.data);
         console.log(response.data);
       } catch (error) {
