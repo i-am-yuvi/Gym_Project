@@ -48,10 +48,11 @@ app.post('/ask', async (req, res) => {
       name: isAnonymous ? 'Anonymous' : name,
       question
     });
+
     await newQuestion.save();
     res.status(201).send('Question submitted successfully');
   } catch (err) {
-    res.status(400).send(err.message);
+    res.status(400).send(err);
   }
 });
 app.get('/test', (req, res) => {

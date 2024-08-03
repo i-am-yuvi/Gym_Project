@@ -3,12 +3,14 @@ const mongoose = require('mongoose');
 // TODO: schema validation
 
 const QuestionSchema = new mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+    },
     question: {
         type: String,
         required: true,
     },
-    date: { 
+    date: {
         type: Date,
         default: Date.now
     },
