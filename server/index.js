@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
-const connect=require('./connection');
+const connect = require('./connection');
 dotenv.config();
 
 const app = express();
@@ -54,14 +54,14 @@ app.post('/ask', async (req, res) => {
     res.status(400).send(err.message);
   }
 });
-app.get('/test',(req,res)=>{
+app.get('/test', (req, res) => {
   res.send("working");
 })
 app.get('/questions', async (req, res) => {
   try {
     // uncomment during production
     // const questions = await Question.find({ answer: {$ne: null}});
-    const questions = await Question.find();
+    const questions = await Question.find({});
     res.json(questions);
   } catch (err) {
     res.status(500).send(err.message);
