@@ -4,11 +4,11 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
-
+const connect=require('./connection');
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // Middleware
 app.use(express.json());
@@ -54,7 +54,9 @@ app.post('/ask', async (req, res) => {
     res.status(400).send(err.message);
   }
 });
-
+app.get('/test',(req,res)=>{
+  res.send("working");
+})
 app.get('/questions', async (req, res) => {
   try {
     // uncomment during production
