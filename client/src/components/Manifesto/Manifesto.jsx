@@ -5,49 +5,40 @@ import './Manifesto.css';
 
 const manifestoItems = [
   {
-    title: 'Empower our community through education.',
-    description:
-      'We aim to enhance educational resources and opportunities for all community members, fostering personal and professional growth.',
+    "title": "Better and improved facilities at Medical Unit",
+    "description": "We aim to upgrade the medical unit with state-of-the-art equipment, increase staff, and extend operating hours to provide enhanced healthcare services to all campus members."
   },
   {
-    title: 'Promote sustainability and eco-friendly practices.',
-    description:
-      'Our focus is on encouraging sustainable practices and reducing environmental impact through various initiatives.',
+    "title": "Enhanced food quality and hygiene in mess",
+    "description": "Our goal is to improve the overall dining experience by sourcing higher quality ingredients, implementing stricter hygiene standards, and offering a more diverse menu to cater to various dietary needs."
   },
   {
-    title: 'Foster innovation and technology development.',
-    description:
-      'We support the advancement of technology and innovation to drive progress and create new opportunities.',
+    "title": "Extended Wifi for entire campus",
+    "description": "We plan to expand wifi coverage to all areas of the campus, ensuring fast and reliable internet access for students and staff to support their academic and professional needs."
   },
   {
-    title: 'Enhance public health and safety measures.',
-    description:
-      'Our goal is to improve public health and safety through better policies and resources.',
+    "title": "Improved gym with better equipments",
+    "description": "We're committed to upgrading the campus gym with modern fitness equipment, expanding the workout space, and introducing new training programs to promote health and wellness among our community."
   },
   {
-    title: 'Support local businesses and economic growth.',
-    description:
-      'We strive to boost the local economy by supporting small businesses and fostering economic development.',
+    "title": "Removal of in and out timing of girls hostel",
+    "description": "We propose to eliminate curfew restrictions for the girls' hostel, promoting equality and freedom of movement for all students regardless of gender."
   },
   {
-    title: 'Encourage cultural diversity and inclusivity.',
-    description:
-      'We promote a culture of inclusivity and celebrate diversity within our community.',
+    "title": "Food delivery upto hostels for added convenience",
+    "description": "We plan to implement a system allowing food delivery services to reach hostel areas, enhancing convenience for students during late-night study sessions or when they prefer to dine in their rooms."
   },
   {
-    title: 'Improve infrastructure and urban planning.',
-    description:
-      'Our focus is on enhancing infrastructure and urban planning to improve living conditions and accessibility.',
+    "title": "Modernize support and student centric approach for placements",
+    "description": "Our focus is on revamping the placement cell with advanced tools, personalized career guidance, and stronger industry connections to better prepare students for their professional futures."
   },
   {
-    title: 'Increase transparency and accountability in governance.',
-    description:
-      'We advocate for greater transparency and accountability in government operations to build public trust.',
+    "title": "Night canteen in the campus",
+    "description": "We propose to establish a 24/7 canteen on campus to cater to students' late-night food needs, especially during exam periods or for those with non-traditional schedules."
   },
   {
-    title: 'Strengthen community engagement and participation.',
-    description:
-      'We aim to increase community involvement and participation in decision-making processes.',
+    "title": "Air conditioning for main academic building",
+    "description": "We aim to install air conditioning systems in the main academic building to create a more comfortable learning environment, particularly during hot weather conditions."
   },
 ];
 
@@ -61,9 +52,10 @@ const Manifesto = () => {
   return (
     <div className='manifesto-container'>
       <motion.div
-        initial={{ opacity: 0,
+        initial={{
+          opacity: 0,
           x: -30,
-         }}
+        }}
         whileInView={{
           opacity: 1,
           x: 0,
@@ -77,39 +69,35 @@ const Manifesto = () => {
       </motion.div>
       <div className='manifesto-subheading'>
         <Element name='manifesto'>
-          We believe in a future where technology and innovation drive positive
-          change. Our mission is to empower individuals and communities through
-          cutting-edge solutions and sustainable practices
+          Our manifesto represents a commitment to transforming campus life and enhancing the overall student experience. We envision a college environment that prioritizes student well-being, fosters academic excellence, and promotes personal growth. Our proposals aim to modernize facilities, improve services, and create a more inclusive and supportive atmosphere for all students. By addressing key areas such as healthcare, nutrition, technology, and personal freedom, we strive to create a campus that not only meets the current needs of our diverse student body but also prepares them for future success.
         </Element>
       </div>
       <div className='manifesto-grid'>
         {manifestoItems.map((item, index) => (
           <motion.div
-              key={index}
-              className={`manifesto-card ${
-                expandedIndex === index ? 'expanded' : ''
+            key={index}
+            className={`manifesto-card ${expandedIndex === index ? 'expanded' : ''
               }`}
-              onClick={() => handleCardClick(index)}
-initial={{ opacity: 0 }}
+            onClick={() => handleCardClick(index)}
+            initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
               transition: {
                 duration: 2,
               },
             }}
-            >
-              <div className='manifesto-card-header'>
-                <h3 className='manifesto-title'>{item.title}</h3>
-              </div>
+          >
+            <div className='manifesto-card-header'>
+              <h3 className='manifesto-title'>{item.title}</h3>
+            </div>
 
-              <div
-                className={`manifesto-card-placeholder ${
-                  expandedIndex === index ? 'hidden' : ''
+            <div
+              className={`manifesto-card-placeholder ${expandedIndex === index ? 'hidden' : ''
                 }`}
-              ></div>
-              <div className='manifesto-card-details'>
-                <p className='manifesto-description'>{item.description}</p>
-              </div>
+            ></div>
+            <div className='manifesto-card-details'>
+              <p className='manifesto-description'>{item.description}</p>
+            </div>
           </motion.div>
         ))}
       </div>

@@ -107,7 +107,7 @@ const FormSection = () => {
                 >
                   📧
                 </span>{' '}
-                Contact@GreatStack.dev
+                standtogether@gmail.com
               </p>
               <p>
                 <span
@@ -116,7 +116,7 @@ const FormSection = () => {
                 >
                   📞
                 </span>{' '}
-                +1 123-456-7890
+                +91 7908622520
               </p>
               <p>
                 <span
