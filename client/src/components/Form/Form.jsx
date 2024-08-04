@@ -109,15 +109,7 @@ const FormSection = () => {
                 </span>{' '}
                 standtogether@gmail.com
               </p>
-              <p>
-                <span
-                  role='img'
-                  aria-label='phone'
-                >
-                  📞
-                </span>{' '}
-                +91 7908622520
-              </p>
+
               <p>
                 <span
                   role='img'
