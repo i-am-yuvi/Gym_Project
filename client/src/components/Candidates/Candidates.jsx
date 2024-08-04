@@ -6,11 +6,6 @@ import './Candidates.css';
 const CardComponent = () => {
   const candidates = [
     {
-      name: 'Prasant Sahu',
-      designation: 'President',
-      imgSrc: process.env.PUBLIC_URL + '/presi.jpg',
-    },
-    {
       name: 'Shivanshu Kumar',
       designation: 'Vice President',
       imgSrc: process.env.PUBLIC_URL + '/vice_presi.jpg',
