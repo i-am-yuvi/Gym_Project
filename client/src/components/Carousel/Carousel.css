@@ -25,6 +25,13 @@
     transition: opacity 1s ease-in-out;
 }
 
+@media screen and (max-width: 1068px) {
+    .carousel-image {
+        background-size: contain;
+    }
+}
+
+
 .carousel-image.active {
     opacity: 1;
 }

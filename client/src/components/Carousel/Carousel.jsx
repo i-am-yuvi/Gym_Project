@@ -5,8 +5,8 @@ import all_five from '../../images/all_5_posts.jpeg'
 
 const images = [
   stornger_together,
-  'https://wallpapers.com/images/hd/random-shanghai-city-skyline-sunset-razywjghzt72bz8i.jpg',
-  'https://www.highreshdwallpapers.com/wp-content/uploads/2012/09/Random-Coloured-Shapes.jpg',
+  // 'https://wallpapers.com/images/hd/random-shanghai-city-skyline-sunset-razywjghzt72bz8i.jpg',
+  // 'https://www.highreshdwallpapers.com/wp-content/uploads/2012/09/Random-Coloured-Shapes.jpg',
   all_five,
 ];
 
