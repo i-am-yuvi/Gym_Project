@@ -13,13 +13,41 @@ function Answer() {
   const [answers, setAnswers] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const sample = [
+    {
+      name: 'Anon.',
+      question:
+        'What improvements are planned for the campus medical unit to enhance healthcare services for students and staff?',
+      answer:
+        'We are committed to significantly upgrading the campus medical unit by introducing state-of-the-art medical equipment, increasing the number of qualified healthcare professionals, and extending the operating hours. These enhancements aim to provide more comprehensive and accessible healthcare services, ensuring the well-being of all campus members.',
+    },
+    {
+      name: 'Anon.',
+      question:
+        'How will the dining experience in the campus mess be improved in terms of food quality and hygiene?',
+      answer:
+        'Our goal is to elevate the overall dining experience by sourcing higher quality ingredients, implementing stricter hygiene standards, and offering a more diverse menu to cater to various dietary needs.',
+    },
+    {
+      name: 'Anon.',
+      question:
+        'What steps are being taken to ensure extended WiFi coverage across the entire campus?',
+      answer:
+        'We plan to expand WiFi coverage to all areas of the campus, ensuring fast and reliable internet access for students and staff to support their academic and professional needs.',
+    },
+  ];
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://gym-project-jzk9.onrender.com/questions');
+        const response = await axios.get(
+          'https://gym-project-jzk9.onrender.com/questions'
+        );
         const answerFiltered = response.data
           .filter((query) => query['answer'] != null)
+          .filter((query) => query['answer'] !== 'okay fine')
           .reverse();
+        answerFiltered.push(...sample);
         setAnswers(answerFiltered);
         console.log(answerFiltered);
       } catch (error) {
@@ -70,7 +98,10 @@ function Answer() {
         <p className='question'>{answers[currentIndex]?.question}</p>
         <p className='answer'>{answers[currentIndex]?.answer}</p>
         <div className='nav-arrows'>
-          <div className='left' onClick={handlePrev}>
+          <div
+            className='left'
+            onClick={handlePrev}
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               height='30px'
@@ -82,7 +113,10 @@ function Answer() {
             </svg>
           </div>
 
-          <div className='right' onClick={handleNext}>
+          <div
+            className='right'
+            onClick={handleNext}
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               height='30px'

@@ -60,7 +60,7 @@ const FormSection = () => {
           <form onSubmit={handleSubmit}>
             <h2 className='contact-form-heading'>Let's Talk</h2>
             <p className='contact-form-subheading'>
-              Send us an email with a few details about your project.
+              Send us your questions or suggestions through this form.
             </p>
             <label>Your name</label>
             <input
