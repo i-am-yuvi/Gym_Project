@@ -1,5 +1,5 @@
 .answer-container {
-  display:flex;
+  display: flex;
   justify-content: center;
   color: #ffffff;
   padding: 30px;
@@ -7,13 +7,14 @@
   display: flex;
 }
 
-.answer-container > .content {
+.answer-container>.content {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   background-color: #0f0f0f;
   padding: 30px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .question {
@@ -58,6 +59,20 @@
   font-size: 1.7rem;
   font-family: 'Kanit';
 }
+
+.nav-arrows {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-arrows * :hover {
+  fill: #b1a695;
+}
+
+
 @media (max-width: 500px) {
   .answer {
     font-size: 1.2rem;
